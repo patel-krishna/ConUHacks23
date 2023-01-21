@@ -1,0 +1,20 @@
+{
+  "name": "Password Generator",
+  "version": "0.01",
+  "description": "Display on popout",
+  "browser_action": {
+		"default_title": "Popout HTML",
+		"default_popup": "popout.html"
+	},
+  "chrome_url_overrides":{
+  },
+  "manifest_version": 2,
+  "icons": { "16": "images/icon.png",
+    "48": "images/icon.png",
+   "128": "images/icon.png" },
+   "background":{
+    "page": "background.html",
+    "persistent": false
+  }
+ 
+}
