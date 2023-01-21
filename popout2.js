@@ -1,7 +1,6 @@
 const lengthSlider = document.querySelector(".password-length input");
 const options = document.querySelectorAll(".option input");
-const generateBtn =  document.querySelector(".generate-btn");
-
+const generateBtn =  document.querySelector(".generate-button");
 
 const characters = {
     lowercaseWord : ["apple", 'cat', 'dog'],
@@ -9,28 +8,23 @@ const characters = {
     numbers : ['1', '2', '3'],
     characters : ["!", "$", "&"]
 }
-
 const generatePassword = () => {
-    alert("clicked");
+  
     let staticPassword = "";
     let randomPassword = "";
-    let passLength = lengthSlider.value; 
+    let passLength = lengthSlider.value;
 
+    console.log("clicked");
 
     options.forEach(option => {
         if(option.checked) {
-            console.log(option);
+            console.log(characters[option.id][2]);
             // staticPassword += characters[option.id[1]];
             // console.log(staticPassword)
         }
     });
+   
 
 }
 
-const updateSlider = () => {
-    document.querySelector(".password-length span").innerText = lengthSlider.value;
-}
-updateSlider()
-
-lengthSlider.addEventListener("input", updateSlider);
 generateBtn.addEventListener("click", generatePassword);
