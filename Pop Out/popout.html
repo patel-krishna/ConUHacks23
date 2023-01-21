@@ -13,9 +13,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
-
-        <!-- Script Files-->
-        <script src="popout2.js"></script>
     </head>
     <body>
         <div class="container">
@@ -32,13 +29,13 @@
                         <label class="title">Password Length</label>
                         <span></span>
                     </div>
-                    <input type="range" min="1" max="30" step="1">
+                    <input type="range" min="1" max="30" value="15" step="1">
                 </div>
                 <div class="password-settings">
                     <label class="title">Password Setting</label>
                     <ul class="options">
                         <li class="option">
-                            <input type="checkbox" id="lowercase" checked>
+                            <input type="checkbox" id="lowercase">
                             <label for="lowercase">Lowercase(a-z)</label>
                         </li>
 
@@ -56,15 +53,11 @@
                             <input type="checkbox" id="symbols">
                             <label for="symbols">Symbols(!$%&)</label>
                         </li>
-                        <li class="option">
-                            <input type="checkbox" id="exc-duplicate">
-                            <label for="exc-duplicate">Exclude Duplicate</label>
-                        </li>
                     </ul>
                 </div>
-                <button class="generate-btn">Generate Password</button>
+                <button class="generate-button">Generate Password</button>
             </div>
         </div>
-        <script src="popout.js"></script>
+        <script src="popout3.js"> </script>
     </body>
 </html>
