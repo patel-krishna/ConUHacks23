@@ -65,8 +65,23 @@ body {
   content: "";
   height: 100%;
   width: 50%;
-  background: #FFF582;
   border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.password-indicator#weak::before{
+  width: 20%;
+  background: #cc5143;
+}
+
+.password-indicator#medium::before{
+  width: 50%;
+  background: #FFF582;
+}
+
+.password-indicator#strong::before{
+  width: 100%;
+  background: #97eb8f;
 }
 
 .wrapper .password-length{

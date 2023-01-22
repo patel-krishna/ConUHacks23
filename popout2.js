@@ -1,7 +1,16 @@
 const lengthSlider = document.querySelector(".password-length input");
 const options = document.querySelectorAll(".option input");
-const passwordInput = document.querySelector(".input-box input")
+const copyIcon = document.querySelector(".input-box span");
+const passwordInput = document.querySelector(".input-box input");
+const passwordIndicator = document.querySelector(".password-indicator");
 const generateBtn =  document.querySelector(".generate-button");
+const optionCheck = document.querySelector(".option input");
+const optionLower = document.getElementById("lowercase");
+const optionUpper = document.getElementById("uppercase");
+const optionNumbers = document.getElementById("numbers")
+const optionSymbols = document.getElementById("symbols")
+
+let optionNum = 0;
 
 const characters = {
     lowercase : 'abcdefghijklmnopqrstuvwxyz',
@@ -20,12 +29,9 @@ const generatePassword = () => {
     let randomPassword = "";
     let passLength = lengthSlider.value;
 
-    console.log("clicked");
-
     options.forEach(option => {
         if(option.checked) {
             staticPassword += characters[option.id];
-            console.log(staticPassword)
         }
     });
    
@@ -35,22 +41,49 @@ const generatePassword = () => {
     passwordInput.value = randomPassword;
 }
 
+const countOptions = () => {
+    optionNum = 0;
+    options.forEach(option => {
+        if(option.checked) {
+           optionNum += 1;
+        }
+    });
+    updatePassIndicator();
+}
+
+const updatePassIndicator = () => {
+    if(lengthSlider.value <=7 || (lengthSlider.value >8 && optionNum <= 1)) {
+        passwordIndicator.id = "weak"
+    }
+    else if(lengthSlider.value >=8 && optionNum == 2) {
+        passwordIndicator.id = "medium"
+    }
+    else if(lengthSlider.value >=8 && optionNum >2) {
+        passwordIndicator.id = "strong"
+    }
+}
 
 const updateSlider = () => {
     document.querySelector(".password-length span").innerText = lengthSlider.value;
+    updatePassIndicator();
 }
 updateSlider();
 
+const copyPassword = () => {
+    navigator.clipboard.writeText(passwordInput.value);
+    copyIcon.innerText = "check"
+    timeOut(() => {
+        copyIcon.innerText = "content_copy";
+    }, 1500);
+}
+
 generateBtn.addEventListener("click", generatePassword);
 lengthSlider.addEventListener("input", updateSlider); 
-
-
-
-
-
-
-
-
+copyIcon.addEventListener("click", copyPassword);
+optionLower.addEventListener("click", countOptions);
+optionUpper.addEventListener("click", countOptions);
+optionNumbers.addEventListener("click", countOptions);
+optionSymbols.addEventListener("click", countOptions);
 
 
 
