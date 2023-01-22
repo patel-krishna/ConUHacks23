@@ -14,21 +14,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body>
-        <div class="lion-div"><img src="images/angry_head.png" width=220  style="padding: 0 50px 0 50px"> </div>
+        <div class="lion-div "><img src="images/angry_head.png" width=220  style="padding: 0 50px 0 50px" id="img" class=""> </div>
         <div class="container">
             <h2>PassROAR Generator</h2>
             <div class="wrapper">
                 <div class="input-box">
-                    <input type="text" value="password" disabled>
+                    <input type="text" value="Password" disabled>
                     <span class="material-symbols-outlined">content_copy</span>
                 </div>
 
                 <div class="password-indicator" id="weak"></div>
                 <div class="password-length">
                     <div class="password-details">
-                        <label class="title">Password Length</label>
+                        <label class="title">Password Length: </label>
                         <span></span>
                     </div>
                     <input type="range" min="1" max="30" value="1" step="1">

@@ -17,19 +17,30 @@ body {
 
 }
 
-
-
-
 .lion-div {
   
   position: absolute;
   height: 150px;
-  top: 7px;
+  top: 0px;
 
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+
+.rise-shake {
+  animation: jump-shaking 0.90s;
+}
+@keyframes jump-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-15px) }
+  35% { transform: translateY(-15px) rotate(17deg) }
+  55% { transform: translateY(-15px) rotate(-17deg) }
+  65% { transform: translateY(-15px) rotate(17deg) }
+  75% { transform: translateY(-15px) rotate(-17deg) }
+  100% { transform: translateY(0) rotate(0) }
 }
 
 .container h2 {
@@ -49,6 +60,8 @@ body {
   background-size: cover;
   padding: 10px;
   bottom: 10px;
+  margin-bottom: 10px;
+  font-family: 'Lexend', sans-serif;
 }
 
 .wrapper {
@@ -65,8 +78,17 @@ body {
   color: black;
   font-weight: 500;
   border: 1px solid #aaa;
-  border-radius: 4px;
   padding: 0 2px 0 2px;
+  
+  background-color: whitesmoke;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
 
 }
 
@@ -75,6 +97,7 @@ body {
   top: 17px;
   right: 13px;
   color: #707070;
+  
 }
 
 .wrapper .password-indicator{
@@ -192,43 +215,6 @@ body {
     padding: 0 25px;
   }
 }
-
-/* input[type="range"] {
-  -webkit-appearance: none;
- }
- 
- input[type="range"]:focus {
-  outline: none;
- }
-
- input[type="range"]::-webkit-slider-runnable-track {
-  background: #422800;
-  height: 5px;
- }
- 
- input[type="range"]::-moz-range-track {
-  background: #422800;
-  height: 5px;
- }
-
- input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
-  background:  #422800;
-  margin-top: -5px;
-  border-radius: 50%;
-  box-shadow: #707070;
- }
- 
- input[type="range"]::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  background:  #422800;
-  margin-top: -5px;
-  border-radius: 50%;
-  box-shadow: #707070;
- } */
 
  @keyframes floating {
   0% { transform: translate(0,  0px); }

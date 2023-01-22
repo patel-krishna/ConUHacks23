@@ -54,13 +54,46 @@ const countOptions = () => {
 const updatePassIndicator = () => {
     if(lengthSlider.value <=7 || (lengthSlider.value >8 && optionNum <= 1)) {
         passwordIndicator.id = "weak";
+        changeImg("weak");
     }
     else if(lengthSlider.value >=8 && optionNum == 2) {
         passwordIndicator.id = "medium"
+        changeImg("medium");
     }
     else if(lengthSlider.value >=8 && optionNum >2) {
         passwordIndicator.id = "strong"
+        changeImg("strong");
     }
+}
+
+const changeImg = (string) => {
+    if(string == "weak"){
+        var img = document.getElementById("img");
+        img.src="images/angry_head.png";
+        test();
+    }else if(string == "medium"){
+        var img = document.getElementById("img");
+        img.src="images/meh_head.png";
+        test();
+    }else if(string == "strong"){
+        var img = document.getElementById("img");
+        img.src="images/happy_head.png";
+        test();
+    }
+}
+
+const test = () => {
+    const el = document.getElementById("img");
+    el.classList.add("rise-shake")
+    setTimeout(function(){
+        // Code to run after the pause
+        removeAnim();
+    }, 1000);
+}
+
+const removeAnim = () => {
+    const el = document.getElementById("img");
+    el.classList.remove("rise-shake");
 }
 
 const updateSlider = () => {
