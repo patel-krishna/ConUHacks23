@@ -7,8 +7,8 @@ const generateBtn =  document.querySelector(".generate-button");
 const optionCheck = document.querySelector(".option input");
 const optionLower = document.getElementById("lowercase");
 const optionUpper = document.getElementById("uppercase");
-const optionNumbers = document.getElementById("numbers")
-const optionSymbols = document.getElementById("symbols")
+const optionNumbers = document.getElementById("numbers");
+const optionSymbols = document.getElementById("symbols");
 
 let optionNum = 0;
 
@@ -72,7 +72,7 @@ updateSlider();
 const copyPassword = () => {
     navigator.clipboard.writeText(passwordInput.value);
     copyIcon.innerText = "check"
-    timeOut(() => {
+    setTimeout(() => {
         copyIcon.innerText = "content_copy";
     }, 1500);
 }

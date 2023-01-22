@@ -15,12 +15,20 @@ body {
 
 }
 
+.lion-div {
+  position: absolute;
+  height: 150px;
+  top: 7px;
+  background: url('Meh_Lion1.png');
+}
+
 .container h2 {
   font-family: 'Lexend', sans-serif;
   padding: 10px 10px;
 }
 
 .container {
+  position: absolute;
   width: 450px;
   background: white;
   border-radius: 10px;
