@@ -1,1 +1,3 @@
-# ConUHacks23 test 1
+# PassROAR Generator
+
+Submission for ConUHacks VII
