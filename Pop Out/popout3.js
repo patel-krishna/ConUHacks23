@@ -1,5 +1,6 @@
 const lengthSlider = document.querySelector(".password-length input");
 const options = document.querySelectorAll(".option input");
+const copyIcon = document.querySelectorAll
 const passwordInput = document.querySelector(".input-box input")
 const generateBtn =  document.querySelector(".generate-button");
 
