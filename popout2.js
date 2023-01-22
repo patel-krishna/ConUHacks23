@@ -54,12 +54,18 @@ const countOptions = () => {
 const updatePassIndicator = () => {
     if(lengthSlider.value <=7 || (lengthSlider.value >8 && optionNum <= 1)) {
         passwordIndicator.id = "weak"
+        var img = document.getElementById("img");
+        img.src="Angry_lion.png";
     }
     else if(lengthSlider.value >=8 && optionNum == 2) {
         passwordIndicator.id = "medium"
+        var img = document.getElementById("img");
+        img.src="Meh_Lion.png";
     }
     else if(lengthSlider.value >=8 && optionNum >2) {
         passwordIndicator.id = "strong"
+        var img = document.getElementById("img");
+        img.src="Happy_Lion.png";
     }
 }
 

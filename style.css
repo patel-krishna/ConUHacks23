@@ -15,11 +15,10 @@ body {
 
 }
 
-.lion-div {
+.lion-div{
   position: absolute;
   height: 150px;
   top: 7px;
-  background: url('Meh_Lion1.png');
 }
 
 .container h2 {
