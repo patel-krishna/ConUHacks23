@@ -1,120 +1,237 @@
 .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
+  
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 550px;
+  background: #FFDB97;
+
+}
+
+
+
+
+.lion-div {
+  
+  position: absolute;
+  height: 150px;
+  top: 7px;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.container h2 {
+  font-family: 'Caveat Brush', cursive;
+  /* font-family: 'Lexend', sans-serif; */
+  padding: 0;
+  text-align: center;
+  font-size: 37px;
+  color:#422800;
+}
+
+.container {
+  position: absolute;
+  width: 300px;
+  background-image: url('images/paw_bg.png');
+  border-radius: 50px;
+  background-size: cover;
+  padding: 10px;
+  bottom: 10px;
+}
+
+.wrapper {
+  margin: 10px 10px;
+}
+
+.wrapper .input-box{
+  position: relative;
+}
+
+.input-box input{
+  width: 100%;
+  height: 50px;
+  color: black;
+  font-weight: 500;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0 2px 0 2px;
+
+}
+
+.input-box span{
+  position: absolute;
+  top: 17px;
+  right: 13px;
+  color: #707070;
+}
+
+.wrapper .password-indicator{
+  width: 100%;
+  height: 6px;
+  position: relative;
+  margin-top: 5px;
+  border-radius: 25px;
+}
+
+.password-indicator::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.password-indicator#weak::before{
+  width: 20%;
+  background: #cc5143;
+}
+
+.password-indicator#medium::before{
+  width: 50%;
+  background: #FFF582;
+}
+
+.password-indicator#strong::before{
+  width: 100%;
+  background: #97eb8f;
+}
+
+.wrapper .password-length{
+  margin: 20px 0 15px;
+}
+
+.password-length .details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.password-length input {
+  width: 100%;
+  height: 5px;
+}
+
+.password-settings .options{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 3px;
+}
+
+.password-settings .options .option{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: calc(100% / 2);
+}
+
+.options .option input{
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+.options .option label{
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+.wrapper .generate-button{
+  font-size: 16px;
+  padding:  0 20px;
+  margin: 5px 0 10px;
+}
+
+.div-button{
+  text-align: center;
+}
+
+.container button{
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Caveat Brush', cursive;
+}
+
+.container button:hover {
+  background-color: #fff;
+}
+
+.container button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .container button {
+    min-width: 75px;
+    padding: 0 25px;
   }
-  
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #fffde6;
-  
-  }
-  
-  .container h2 {
-    font-family: 'Lexend', sans-serif;
-    padding: 10px 10px;
-  }
-  
-  .container {
-    width: 450px;
-    background: white;
-    border-radius: 10px;
-  }
-  
-  .wrapper {
-    margin: 10px 10px;
-  }
-  
-  .wrapper .input-box{
-    position: relative;
-  }
-  
-  .input-box input{
-    width: 100%;
-    height: 50px;
-    color: black;
-    font-weight: 500;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding: 0 2px 0 2px;
-  
-  }
-  
-  .input-box span{
-    position: absolute;
-    top: 17px;
-    right: 13px;
-    color: #707070;
-  }
-  
-  .wrapper .password-indicator{
-    width: 100%;
-    height: 6px;
-    position: relative;
-    margin-top: 5px;
-    border-radius: 25px;
-  }
-  
-  .password-indicator::before{
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 50%;
-    background: #FFF582;
-    border-radius: inherit;
-  }
-  
-  .wrapper .password-length{
-    margin: 20px 0 15px;
-  }
-  
-  .password-length .details{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .password-length input {
-    width: 100%;
-    height: 5px;
-  }
-  
-  .password-settings .options{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    margin-top: 3px;
-  }
-  
-  .password-settings .options .option{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    width: calc(100% / 2);
-  }
-  
-  .options .option input{
-    height: 15px;
-    width: 15px;
-    cursor: pointer;
-  }
-  .options .option label{
-    cursor: pointer;
-    padding-left: 2px;
-  }
-  
-  .wrapper .generate-button{
-    width: 100%;
-    font-size: 16px;
-    padding: 3px;
-    margin: 5px 0 10px;
-  }
-  
-  
-  
-  
-  
+}
+
+/* input[type="range"] {
+  -webkit-appearance: none;
+ }
+ 
+ input[type="range"]:focus {
+  outline: none;
+ }
+
+ input[type="range"]::-webkit-slider-runnable-track {
+  background: #422800;
+  height: 5px;
+ }
+ 
+ input[type="range"]::-moz-range-track {
+  background: #422800;
+  height: 5px;
+ }
+
+ input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background:  #422800;
+  margin-top: -5px;
+  border-radius: 50%;
+  box-shadow: #707070;
+ }
+ 
+ input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background:  #422800;
+  margin-top: -5px;
+  border-radius: 50%;
+  box-shadow: #707070;
+ } */
+
+ @keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}

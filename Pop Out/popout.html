@@ -9,27 +9,29 @@
 
         <!-- Google Icons Link-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
         <!-- Google Fonts Link-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="lion-div"><img src="images/angry_head.png" width=220  style="padding: 0 50px 0 50px"> </div>
         <div class="container">
-            <h2>Password Generator</h2>
+            <h2>PassROAR Generator</h2>
             <div class="wrapper">
                 <div class="input-box">
                     <input type="text" value="password" disabled>
                     <span class="material-symbols-outlined">content_copy</span>
                 </div>
 
-                <div class="password-indicator"></div>
+                <div class="password-indicator" id="weak"></div>
                 <div class="password-length">
                     <div class="password-details">
                         <label class="title">Password Length</label>
                         <span></span>
                     </div>
-                    <input type="range" min="1" max="30" value="15" step="1">
+                    <input type="range" min="1" max="30" value="1" step="1">
                 </div>
                 <div class="password-settings">
                     <label class="title">Password Setting</label>
@@ -53,9 +55,13 @@
                             <input type="checkbox" id="symbols">
                             <label for="symbols">Symbols(!$%&)</label>
                         </li>
+
                     </ul>
                 </div>
-                <button class="generate-button">Generate Password</button>
+                <div class="div-button">
+                    <button class="generate-button">Generate Password</button>
+                </div>
+                
             </div>
         </div>
         <script src="popout3.js"> </script>
